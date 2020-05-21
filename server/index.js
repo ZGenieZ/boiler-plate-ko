@@ -29,6 +29,10 @@ mongoose
 
 app.get("/", (req, res) => res.send("Hello world! jinhee"));
 
+app.get("/api/hello", (req, res) => {
+  res.send("안녕하세요 ~");
+});
+
 app.post("/api/users/register", (req, res) => {
   //회원 가입 할때 필요한 정보들을 client에서 가져오면 그것들을 DB에 넣어준다.
   /*req.body 안에는 json 형식으로 정보들이 들어있음(bodyParser 모듈로 사용가능) 
